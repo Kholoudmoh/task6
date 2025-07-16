@@ -1,0 +1,75 @@
+Question 1:
+What is the purpose of the ? operator in Dart null safety?
+
+Answer:
+The ? operator allows declaring a nullable type that can hold null.
+
+Example:
+int? age = null;
+
+
+--------------------------------------------
+
+Question 2:
+Create a late variable named address, assign a US value to it and print it.
+
+Code:
+void main() {
+  late String address;
+  address = "New York, USA";
+  print("Address: $address");
+}
+
+--------------------------------------------
+
+Question 3:
+How do you declare a nullable type in Dart null safety?
+
+Answer:
+By adding ? after the type.
+Example:
+String? city;
+
+--------------------------------------------
+
+Question 4:
+Write a program in Dart to create an age variable and assign a null value using ?.
+
+Code:
+void main() {
+  int? age = null;
+  print("Age: $age");
+}
+
+--------------------------------------------
+
+Question 5:
+Write a function that accepts a nullable int parameter and returns 0 if the value is null using null coalescing operator ??.
+
+Code:
+int checkValue(int? value) {
+  return value ?? 0;
+}
+
+void main() {
+  int? number = null;
+  print(checkValue(number)); // Output: 0
+}
+
+--------------------------------------------
+
+Question 6:
+Write a function named generateRandom() in Dart that randomly returns 100 or null. Also, assign a return value of the function to a variable named status that can’t be null. Give status a default value of 0 if generateRandom() returns null.
+
+Code:
+import 'dart:math';
+
+int? generateRandom() {
+  Random random = Random();
+  return random.nextBool() ? 100 : null;
+}
+
+void main() {
+  int status = generateRandom() ?? 0;
+  print("Status: $status");
+}
